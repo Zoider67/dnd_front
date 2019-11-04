@@ -6,23 +6,22 @@
                     <label for="search-input" class="mt-3 ml-2"><i class="material-icons md-48"> search </i></label>
                 </b-col>
                 <b-col sm="10">
-                    <b-form-input id="search-input" placeholder="Search"></b-form-input>
+                    <b-form-input id="search-input" placeholder="Поиск"></b-form-input>
                 </b-col>
             </b-row>
         </div>
         <div id="navigation">
-            <b-nav vertical align="start">
-                <b-nav-item active>Active</b-nav-item>
-                <b-nav-item>Link</b-nav-item>
-                <b-nav-item>Another Link</b-nav-item>
-                <b-nav-item disabled>Disabled</b-nav-item>
+            <b-nav vertical align="start" card-header>
+                <b-nav-item to="/dashboard" class="navigation"><i class="material-icons md-24" > person_outline </i> Персонажи</b-nav-item>
+                <b-nav-item to="/groups" class="navigation"><i class="material-icons md-24"> people_outline </i> Группы</b-nav-item>
+                <b-nav-item to="/info" class="navigation"><i class="material-icons md-24"> info_outline </i> Справочник</b-nav-item>
             </b-nav>
         </div>
         <div id="fav">
-            favorites
+            <i class="material-icons md-48" style="color:orange"> star </i> Избранное
         </div>
         <div id="bottom">
-            Bottom
+            <b-button class="mt-2" variant="link"><i class="material-icons md-24"> group_add </i>Новая группа</b-button>
         </div>
     </div>
 </template>
@@ -35,9 +34,9 @@ export default {
 
 <style>
     #sidebar{
-        height: inherit;
+        height: 94%;
         min-height: 580px;
-        padding-bottom: 20%;
+        top: 0;
     }
     #search{
         height: 10%;
@@ -48,6 +47,7 @@ export default {
         height: 30%;
         border-right: 1px solid lightgrey;
         border-bottom: 1px solid lightgrey;
+        padding-top: 5px;
     }
     #fav{
         height: 50%;
@@ -69,5 +69,19 @@ export default {
     }
     i{
         vertical-align:bottom;
+    }
+    .nav-link{
+        color:black;
+    }
+    .navigation a:hover{
+        color: black;
+        background-color: lightblue;
+    }
+    .btn-link:hover{
+        text-decoration: none;
+    }
+    .btn-link{
+        text-decoration: none;
+        color: black;
     }
 </style>

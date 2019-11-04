@@ -3,6 +3,9 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
 const DefaultContainer = () => import('@/Containers/DefaultContainer')
+const Dashboard = () => import('@/views/Dashboard')
+const Groups = () => import('@/views/Groups')
+const Info = () => import('@/views/Info')
 
 Vue.use(VueRouter)
 
@@ -10,9 +13,26 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: DefaultContainer
+    component: DefaultContainer,
+    children: [
+      {
+        path: 'dashboard',
+        name: 'Dashboard',
+        component: Dashboard
+      },
+      {
+        path: 'groups',
+        name: 'Groups',
+        component: Groups
+      },
+      {
+        path: 'info',
+        name: 'Info',
+        component: Info
+      }
+    ]
   },
-  {
+  { 
     path: '/about',
     name: 'about',
     // route level code-splitting

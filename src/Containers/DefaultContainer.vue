@@ -6,61 +6,7 @@
                 <SideBar/>
             </div>
             <div class="main">
-                dadada
-                <br>
-                dadada
-                <br>
-                dadada
-                <br>
-                dadada
-                <br>
-                dadada
-                <br>
-                dadada
-                <br>
-                dadada
-                <br>
-                dadada
-                <br>
-                dadada
-                <br>
-                dadada
-                <br>
-                dadada
-                <br>
-                dadada
-                <br>
-                dadada
-                <br>
-                dadada
-                <br>
-                dadada
-                <br>
-                dadada
-                <br>
-                dadada
-                <br>
-                dadada
-                <br>
-                dadada
-                <br>
-                dadada
-                <br>
-                dadada
-                <br>
-                dadada
-                <br>
-                dadada
-                <br>
-                dadada
-                <br>
-                dadada
-                <br>
-                dadada
-                <br>
-                dadada
-                <br>
-                
+                <router-view></router-view>
             </div>
         </div>
     </div>
@@ -97,7 +43,7 @@ export default {
         top: 0; /* Stay at the top */
         left: 0;
         overflow-x: hidden; /* Disable horizontal scroll */
-        margin-top: 40px;
+        margin-top: 36px;
     }
     .main {
         margin-left: 200px; /* Same as the width of the sidebar */
