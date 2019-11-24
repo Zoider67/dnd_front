@@ -48,6 +48,7 @@ export default {
     .main {
         margin-left: 200px; /* Same as the width of the sidebar */
         padding: 0px 10px;
+        overflow-x: hidden;
         }
 
         /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */

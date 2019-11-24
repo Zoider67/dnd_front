@@ -14,7 +14,7 @@
             <b-nav vertical align="start" card-header>
                 <b-nav-item to="/dashboard" class="navigation"><i class="material-icons md-24" > person_outline </i> Персонажи</b-nav-item>
                 <b-nav-item to="/groups" class="navigation"><i class="material-icons md-24"> people_outline </i> Группы</b-nav-item>
-                <b-nav-item to="/info" class="navigation"><i class="material-icons md-24"> info_outline </i> Справочник</b-nav-item>
+                <b-nav-item to="/info" class="navigation"><i class="material-icons md-24"> info_outline </i> Предметы</b-nav-item>
             </b-nav>
         </div>
         <div id="fav">

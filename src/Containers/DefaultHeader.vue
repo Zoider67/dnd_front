@@ -4,26 +4,37 @@
                  <b-nav-item-dropdown center id="user_button" align="left" alignv="center">
                     <!-- Using 'button-content' slot -->
                     <template v-slot:button-content>
-                        <em> <i class="material-icons md-18" style="color:indianred"> account_circle </i> User Name</em>
+                        <em> <i class="material-icons md-18" style="color:indianred"> account_circle </i> {{username}}</em>
                     </template>
-                    <b-dropdown-item href="#">Profile</b-dropdown-item>
-                    <b-dropdown-item href="#">Sign Out</b-dropdown-item>
+                    <b-dropdown-item to="/profile">Профиль</b-dropdown-item>
+                    <b-dropdown-item to="/login" @click="signout">Выход</b-dropdown-item>
                 </b-nav-item-dropdown>
-                <b-nav-item > <i class="material-icons md-18"> add </i> </b-nav-item>
+                <b-nav-item id="create-btn" to="/personcreate"> <i class="material-icons md-18"> add </i> <b-tooltip target="create-btn" triggers="hover"> Создать персонажа</b-tooltip> </b-nav-item>
             </b-navbar-nav>
             <b-navbar-nav class="ml-auto">
-                 <b-nav-text>dnd_front</b-nav-text>
+                 <b-nav-text>Подземелья и драконы</b-nav-text>
             </b-navbar-nav>
             <!-- Right aligned nav items -->
             <b-navbar-nav class="ml-auto">
-                <b-nav-item> <i class="material-icons md-18"> notifications </i> </b-nav-item>
+                <b-nav-item to="/help"> <i class="material-icons md-18"> live_help </i> </b-nav-item>
             </b-navbar-nav>
         </b-navbar>
 </template>
 
 <script>
 export default {
-    name: 'DefaultHeader'
+    name: 'DefaultHeader',
+    computed: {
+        username: function(){
+            return localStorage.username;
+        }
+    },
+    methods: {
+        signout() {
+            localStorage.removeItem('username');
+            localStorage.removeItem('access_token')
+        }
+    }
 }
 </script>
 
