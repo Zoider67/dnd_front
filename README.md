@@ -1,4 +1,4 @@
-# gavno
+# dnd_front
 
 ## Project setup
 ```
